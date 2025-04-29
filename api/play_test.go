@@ -3,6 +3,7 @@ package api_test
 import (
 	"bytes"
 	"encoding/json"
+	"fmt"
 	"io"
 	"math/rand/v2"
 	"net/http"
@@ -86,6 +87,7 @@ func post(t *testing.T, r *gin.Engine, path string, token string, arg any) (ret 
 }
 
 func TestPlay(t *testing.T) {
+	fmt.Println("ttttttttttttttttttttttttttt")
 	const cid, uid uint64 = 1, 3
 	var arg, ret gin.H
 	var admtoken, usrtoken string
@@ -173,6 +175,7 @@ func TestPlay(t *testing.T) {
 			"gid": gid,
 		}
 		ret = post(t, r, "/slot/spin", usrtoken, arg)
+		fmt.Println(ret)
 		var game = ret["game"].(map[string]any)
 		if v, ok := game["gain"]; ok {
 			gain = v.(float64)
@@ -200,6 +203,7 @@ func TestPlay(t *testing.T) {
 					"mult": 2,
 				}
 				ret = post(t, r, "/slot/doubleup", usrtoken, arg)
+				fmt.Println(ret)
 				var gain = ret["gain"].(float64)
 				wallet = ret["wallet"].(float64)
 				t.Logf("[doubleup] gid: %d, id: %d, wallet: %.2f, gain: %g", gid, uint64(ret["id"].(float64)), wallet, gain)

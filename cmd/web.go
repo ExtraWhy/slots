@@ -21,7 +21,7 @@ const webExmp = `
 
 // webCmd represents the web command
 var webCmd = &cobra.Command{
-	Use:     "web",
+	Use:     "",
 	Short:   webShort,
 	Long:    webLong,
 	Example: fmt.Sprintf(webExmp, cfg.AppName),
