@@ -18,7 +18,7 @@ require (
 	go.uber.org/atomic v1.12.0
 	golang.org/x/sync v0.23.0
 	gopkg.in/yaml.v3 v3.0.1
-	xorm.io/xorm v1.4.1
+	xorm.io/xorm v1.4.3
 )
 
 require (
