@@ -3,7 +3,7 @@ module github.com/slotopol/server
 go 1.26.0
 
 require (
-	github.com/bmatcuk/doublestar/v4 v4.10.1
+	github.com/bmatcuk/doublestar/v4 v4.10.2
 	github.com/gin-gonic/gin v1.10.1
 	github.com/go-sql-driver/mysql v1.10.1
 	github.com/golang-jwt/jwt/v5 v5.3.1
